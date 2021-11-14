@@ -1,38 +1,54 @@
 import React from "react"
 import {
   FaFacebookSquare,
-  FaLinkedin,
-  FaDribbbleSquare,
-  FaBehanceSquare,
   FaTwitterSquare,
+  FaInstagram,
+  FaHackerrank,
+  FaLinkedinIn
 } from "react-icons/fa"
+import { Link } from "gatsby";
+
 
 const data = [
   {
     id: 1,
     icon: <FaFacebookSquare className="social-icon"></FaFacebookSquare>,
-    url: "https://www.twitter.com",
+    url: "https://www.facebook.com/krgauravlpu/",
   },
   {
     id: 2,
-    icon: <FaLinkedin className="social-icon"></FaLinkedin>,
-    url: "https://www.twitter.com",
+    icon: <FaInstagram className="social-icon"></FaInstagram>,
+    url: "https://www.instagram.com/gauravk__singh/",
   },
   {
     id: 3,
-    icon: <FaDribbbleSquare className="social-icon"></FaDribbbleSquare>,
-    url: "https://www.twitter.com",
+    icon: <FaHackerrank className="social-icon"></FaHackerrank>,
+    url: "https://www.hackerrank.com/krgauravlpu1",
   },
   {
     id: 4,
-    icon: <FaBehanceSquare className="social-icon"></FaBehanceSquare>,
-    url: "https://www.twitter.com",
+    icon: <FaLinkedinIn className="social-icon"></FaLinkedinIn>,
+    url: "https://www.linkedin.com/in/krgauravlpu/",
   },
   {
     id: 5,
     icon: <FaTwitterSquare className="social-icon"></FaTwitterSquare>,
-    url: "https://www.twitter.com",
+    url: "https://twitter.com/krgaurav123",
   },
 ]
 
-export default data
+const links = data.map(link => {
+  return (
+    <li key={link.id} >
+      <a href={link.url} target="_blank" className="social-link">{link.icon}</a>
+    </li>
+  )
+})
+
+export default ({ styleClass }) => {
+  return (
+    <ul className={`social-links ${styleClass ? styleClass : ""}`} >
+      {links}
+    </ul>
+  )
+}

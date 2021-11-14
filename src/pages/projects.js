@@ -1,12 +1,15 @@
 import React from "react"
-import { graphql } from "gatsby"
 import Projects from "../components/Projects"
-import Seo from "../components/Seo"
+import Layout from '../components/Layout'
+import { PROJECTLIST } from '../constants/projects'
+
 const ProjectsPage = () => {
   return (
-    <>
-      <h2>projects page</h2>
-    </>
+    <Layout>
+      <section className="project-page">
+        <Projects projects={PROJECTLIST} title="All Projects" />
+      </section>
+    </Layout>
   )
 }
 
