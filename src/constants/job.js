@@ -1,8 +1,14 @@
 export const JOBS = [
     {
+        company: "ZEE Entertainment",
+        position: "Senior Software Engineer",
+        date: "November 2021 - Present",
+        description: ["Web User Interface",  "Working in OTT Platform", "Live Data Telecast"]
+    },
+    {
         company: "Standard Chartered Research & Technology",
         position: "SDE III",
-        date: "October 2019 - Present",
+        date: "October 2019 - November 2021",
         description: ["Web User Interface", "Hybrid Mobile Application Developer",
             "Converting Design Idea into Code", "Building products for MSMEs"]
     },

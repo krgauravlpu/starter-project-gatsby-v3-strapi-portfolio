@@ -10,7 +10,6 @@ const About = ({ data }) => {
 
   const { title, description, stack } = ABOUT;
   const fluid = data?.file?.childImageSharp?.fluid;
-  console.log('ABOUT', fluid);
   return (
     <Layout>
       <section className="about-page">

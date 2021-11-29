@@ -10,7 +10,7 @@ const Jobs = () => {
   const [value, setValue] = useState(0);
   const { company, position, date, description } = JOBS[value];
   return <section className="section jobs">
-    <Title title="experiance" />
+    <Title title="experience" />
     <div className="jobs-center">
       <div className="btn-container">
         {JOBS.map((item, index) => {
